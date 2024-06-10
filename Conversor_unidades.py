@@ -15,3 +15,20 @@ dollars_to_pesos = (dollars * 1200) / 1
 
 print(pesos_ars, "pesos son", round(pesos_to_dollars, 1), "dólares")
 print(dollars, "dólares son", round(dollars_to_pesos, 1), "pesos")
+
+# Evaluar valor de y
+
+x =  0
+x = float(x)
+y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
+print("y =", y)
+
+x =  1
+x = float(x)
+y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
+print("y =", y)
+
+x =  -1
+x = float(x)
+y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
+print("y =", y)
