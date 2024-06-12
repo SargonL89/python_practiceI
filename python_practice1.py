@@ -1,54 +1,87 @@
-# Conversor de unidades
+eleccion_programa = int(input("Elija una opción: "))
 
-kilometers = 12.25
-miles = 7.38
+if eleccion_programa == 1:
+    # Conversor de unidades
 
-miles_to_kilometers = (miles * 1.61) / 1
-kilometers_to_miles = (kilometers * 1) / 1.61
+    kilometers = 12.25
+    miles = 7.38
 
-print(miles, "millas son", round(miles_to_kilometers, 2), "kilómetros")
-print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
+    miles_to_kilometers = (miles * 1.61) / 1
+    kilometers_to_miles = (kilometers * 1) / 1.61
 
-dollars = 3000
-pesos_ars = 900000
+    print(miles, "millas son", round(miles_to_kilometers, 2), "kilómetros")
+    print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
 
-pesos_to_dollars = (pesos_ars * 1) / 1200
-dollars_to_pesos = (dollars * 1200) / 1
+    dollars = 3000
+    pesos_ars = 900000
 
-print(pesos_ars, "pesos son", round(pesos_to_dollars, 1), "dólares")
-print(dollars, "dólares son", round(dollars_to_pesos, 1), "pesos")
+    pesos_to_dollars = (pesos_ars * 1) / 1200
+    dollars_to_pesos = (dollars * 1200) / 1
 
-# Evaluar valor de y
+    print(pesos_ars, "pesos son", round(pesos_to_dollars, 1), "dólares")
+    print(dollars, "dólares son", round(dollars_to_pesos, 1), "pesos")
 
-x =  0
-x = float(x)
-y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
-print("y =", y)
+elif eleccion_programa == 2:
+    # Evaluar valor de y
 
-x =  1
-x = float(x)
-y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
-print("y =", y)
+    x =  0
+    x = float(x)
+    y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
+    print("y =", y)
 
-x =  -1
-x = float(x)
-y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
-print("y =", y)
+    x =  1
+    x = float(x)
+    y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
+    print("y =", y)
 
+    x =  -1
+    x = float(x)
+    y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
+    print("y =", y)
 
-# Operadores y expresiones
+elif eleccion_programa == 3:
+    # Operadores y expresiones
 
-hour = int(input("Hora de inicio (horas): "))
-mins = int(input("Minuto de inicio (minutos): "))
-dura = int(input("Duración del evento (minutos): "))
+    hour = int(input("Hora de inicio (horas): "))
+    mins = int(input("Minuto de inicio (minutos): "))
+    dura = int(input("Duración del evento (minutos): "))
 
-hours_to_mins = hour * 60
-total_mins = (hours_to_mins + mins) + dura
+    hours_to_mins = hour * 60
+    total_mins = (hours_to_mins + mins) + dura
 
-event_total_mins = int(total_mins % 60)
-event_total_hours = total_mins - event_total_mins
-event_total_hours = int(event_total_hours / 60)
+    event_total_mins = int(total_mins % 60)
+    event_total_hours = total_mins - event_total_mins
+    event_total_hours = int(event_total_hours / 60)
 
-event_total_hours = event_total_hours % 24
+    event_total_hours = event_total_hours % 24
 
-print(f"Hora de finalización del evento: {event_total_hours}:{event_total_mins}")
+    print(f"Hora de finalización del evento: {event_total_hours}:{event_total_mins}")
+
+else:
+    # Contador pares - impares
+
+    # Un programa que lee una secuencia de números
+    # y cuenta cuántos números son pares y cuántos son impares.
+    # El programa termina cuando se ingresa un cero.
+    
+    odd_numbers = 0
+    even_numbers = 0
+    
+    # Lee el primer número.
+    number = int(input("Introduce un número o escribe 0 para detener: "))
+    
+    # 0 termina la ejecución.
+    while number != 0:
+        # Verificar si el número es impar.
+        if number % 2 == 1:
+            # Incrementar el contador de números impares odd_numbers.
+            odd_numbers += 1
+        else:
+            # Incrementar el contador de números pares even_numbers.
+            even_numbers += 1
+        # Leer el siguiente número.
+        number = int(input("Introduce un número o escribe 0 para detener: "))
+    
+    # Imprimir resultados.
+    print("Conteo de números impares:", odd_numbers)
+    print("Conteo de números pares:", even_numbers)
