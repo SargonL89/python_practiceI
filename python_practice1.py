@@ -57,7 +57,7 @@ elif eleccion_programa == 3:
 
     print(f"Hora de finalización del evento: {event_total_hours}:{event_total_mins}")
 
-else:
+elif eleccion_programa == 4:
     # Contador pares - impares
 
     # Un programa que lee una secuencia de números
@@ -85,3 +85,20 @@ else:
     # Imprimir resultados.
     print("Conteo de números impares:", odd_numbers)
     print("Conteo de números pares:", even_numbers)
+
+else:
+    # Evaluador de Hipótesis de Collatz
+
+    c0 = int(input("Elige un número natural (distinto de cero y positivo): "))
+    steps = 0
+
+    while c0 != 1:
+        if c0 % 2 == 0:
+            c0 = c0 // 2
+            print(c0)
+        else:
+            c0 = 3 * c0 + 1
+            print(c0)
+        steps += 1
+    
+    print("Pasos: ", steps)
