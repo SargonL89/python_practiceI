@@ -86,7 +86,7 @@ elif eleccion_programa == 4:
     print("Conteo de números impares:", odd_numbers)
     print("Conteo de números pares:", even_numbers)
 
-else:
+elif eleccion_programa == 5:
     # Evaluador de Hipótesis de Collatz
 
     c0 = int(input("Elige un número natural (distinto de cero y positivo): "))
@@ -97,8 +97,30 @@ else:
             c0 = c0 // 2
             print(c0)
         else:
-            c0 = 3 * c0 + 1
+            c0 = 3 * c0 + 1 
             print(c0)
         steps += 1
     
     print("Pasos: ", steps)
+
+else:
+    # File extensions
+
+    file_name = input("File name: ").lower().strip()
+
+    if file_name.endswith(".gif"):
+        print("image/gif")
+    elif file_name.endswith(".jpg"):
+        print("image/jpeg")
+    elif file_name.endswith(".jpeg"):
+        print("image/jpeg")
+    elif file_name.endswith(".png"):
+        print("image/png")
+    elif file_name.endswith(".pdf"):
+        print("application/pdf")
+    elif file_name.endswith(".txt"):
+        print("text/plain")
+    elif file_name.endswith(".zip"):
+        print("application/zip")
+    else:
+        print("application/octet-stream")
