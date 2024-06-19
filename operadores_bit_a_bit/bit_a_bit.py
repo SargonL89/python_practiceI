@@ -17,10 +17,10 @@ elif choise == 2:
     flag_register = 0b01010101
     mask = 2 ** 7
 
-    print("flag_register original en binario:", flag_register)
-    print("flag_register original en decimal:", int(str(flag_register), 2))
+    print("flag_register original en binario:", bin(flag_register))
+    print("flag_register original en decimal:", flag_register)
 
     flag_register = flag_register | mask 
 
+    print("flag_register post-mask en binario:", bin(flag_register))
     print("flag_register post-mask en binario:", flag_register)
-    print("flag_register post-mask en decimal:", int(str(flag_register), 2))

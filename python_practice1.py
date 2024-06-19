@@ -103,7 +103,7 @@ elif eleccion_programa == 5:
     
     print("Pasos: ", steps)
 
-else:
+elif eleccion_programa == 6:
     # File extensions
 
     file_name = input("File name: ").lower().strip()
@@ -124,3 +124,15 @@ else:
         print("application/zip")
     else:
         print("application/octet-stream")
+
+else: 
+    # Operadores bit a bit
+    
+    # 1- Dado un número flag_register, escribe un código para verificar si el quinto bit (contando desde 0) está establecido en 1.
+    flag_register = 0b10101010  # Ejemplo de número en binario
+    mask = 4
+
+    if flag_register & mask:
+        print("El bit se estableció en 1")
+    else:
+        print("El bit se estableció en 0")
