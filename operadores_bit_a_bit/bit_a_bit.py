@@ -55,13 +55,13 @@ elif choise == 4:
 
 elif choise == 5:
     # Dado un número flag_register, escribe un código para verificar si el segundo bit (contando desde 0) está establecido en 0. Si está en 0, establece el segundo bit a 1.
-    flag_register = 0b0010100
+    flag_register = 0b0011000
     mask = 2 ** 2
     print("flag_register:", bin(flag_register))
     print("mask:", bin(mask))
-
-    if flag_register ^ mask:
-        flag_register = flag_register ^ mask
-        print("flag register post conditional:", bin(flag_register))
+    
+    if not (flag_register & mask):
+        flag_register = flag_register | mask
+        print("flag register post conditional, second bit is now changed to zero:", bin(flag_register))
     else:
         print("flag_register's second bit is 1")
