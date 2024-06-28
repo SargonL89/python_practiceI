@@ -1,0 +1,40 @@
+def main():
+    plate = input("Plate: ")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+
+
+def is_valid(s):
+    plate_start = s[0:2]
+    if plate_start.isalpha() and 1 < len(s) < 7 and part_num(s):
+        return True
+    else:
+        return False
+
+def part_num(t):
+    part_num = ""
+    response = True
+    for char in t:
+        if not char.isalnum():
+            return False
+    for char in t:
+        if char.isnumeric():
+            indice = t.index(char)
+            part_num = t[indice:]
+            break
+    if part_num.startswith("0"):
+        return False
+    else:
+        for char2 in part_num:
+            if char2.isalpha():
+                response = False
+            else:
+                continue
+    if response:
+        return True
+    else:
+        return False
+
+main()
