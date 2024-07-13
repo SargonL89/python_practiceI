@@ -22,27 +22,46 @@
 # }
 
 students = {}
-qualifications = {}
+averages = {}
 
 while True:
     try: 
-        def qualif_to_average(stud, mater, qualif):
+        def dict_of_students(stud, mater, qualif):
             if stud in students:
-                if mater in qualifications:
+                if mater in students[stud]:
                     students[stud][mater] = qualif
                 else:
-                    qualifications.update({mater: qualif})
+                    students[stud][mater] = ""
+                    students[stud][mater] = qualif
             else:
-                students.update({stud: qualifications})
-            return students
+                students[stud] = {}
+                students[stud][mater] = qualif
+            
+            return students_average(students, stud)
+        
+        def students_average(dicc, stud):
+            ave = 0
+            num_mater = 0
+            for i in dicc[stud]:
+                ave += dicc[stud][i]
+                num_mater += 1
+            ave = format(ave / num_mater, ".2f")
+            if stud in averages:
+                averages[stud] = ave
+            else:
+                averages.update({stud: ave})
+            
+            return averages
 
         estudiante = input("Estudiante: ").title()
         materia = input("Materia: ").title()
         calificacion = int(input("Calificación: "))
 
-        print(qualif_to_average(estudiante, materia, calificacion))
+        print(dict_of_students(estudiante, materia, calificacion))
     
     except TypeError as e:
         print(f"Error: {e}")
-    except EOFError:
+    except KeyboardInterrupt:
         break
+    except:
+        continue
