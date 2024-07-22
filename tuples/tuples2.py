@@ -25,15 +25,16 @@ def resta_compleja(r, i):
     return resta_comp
 
 def multiplica_compleja(r, i):
+    # (a+bi)*(c+di) = (ac-bd) + (ad+bc)i
     c2 = (r, i)
-    real = c1[0] * c2[0]
-    imaginaria = c1[1] * c2[1]
+    real = (c1[0] * c2[0]) - (c1[1] * c2[1])
+    imaginaria = (c1[0] * c2[1]) + (c1[1] * c2[0])
     multiplica_comp = (real, imaginaria)
     return multiplica_comp
 
 while True:
     try:
-        c1 = (1, 2)
+        c1 = (3, 4)
         c2a = int(input("Ingrese parte real del número: "))
         c2b = int(input("Ingrese parte imaginaria del número: "))
 
