@@ -34,7 +34,7 @@ def mayor_diferencia(registros):
     n = 0
     max_dif = 0
     for _ in registros:
-        resta = registros[n][1] - registros[n][2]
+        resta = abs(registros[n][1] - registros[n][2])
         if resta > max_dif:
             max_dif = resta
             dia = registros[n][0]
