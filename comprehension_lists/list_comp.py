@@ -1,3 +1,5 @@
+import random
+
 # Ejercicio 1: Números Pares
 # Descripción:
 # Crea una lista que contenga los números pares del 1 al 20 usando comprensión de listas.
@@ -28,3 +30,18 @@ print(cuadrados)
 lista_completa = ["alf", "manzana", "arbol", "casa", "gol", "po", "esc", "persona", "tigre"]
 lista_de_3 = [palabra for palabra in lista_completa if len(palabra) <= 3]
 print(lista_de_3)
+
+
+# Ejercicio 4: Convertir Lista de Listas
+# Descripción:
+# Dada una lista de listas que contiene números, crea una nueva lista que contenga la suma de los números en cada sublista usando comprensión de listas.
+# Instrucciones:
+# Define una lista de listas, donde cada sublista contiene varios números.
+# Utiliza una comprensión de listas para crear una nueva lista que contenga la suma de los números en cada sublista.
+
+total = 0
+
+listas_random = [[x for x in random.sample(range(10, 40), random.randrange(1, 12))] for i in range(3)]
+print(listas_random)
+listas_sumadas = [sum([i for i in x]) for x in listas_random]
+print(listas_sumadas)
