@@ -1,3 +1,5 @@
+import random
+
 # Ejercicio 1: Longitud de las Palabras
 # Usa comprensión de listas y la función len() para crear una lista que contenga las longitudes de las palabras en una lista de palabras.
 palabras = ["Python", "es", "genial"]
@@ -59,3 +61,69 @@ list_int_numbers = [1, 2, 3, 4, 5, 6, 7]
 
 lista_7 = [pow(n, 2) for n in list_int_numbers]
 print("lista 7:", lista_7)
+
+
+# Ejercicio 8: Valor Absoluto de Números
+# Usa comprensión de listas y la función abs() para obtener el valor absoluto de cada número en una lista.
+numeros_8 = [-1, -2, -3, 4, 5]
+# # Resultado esperado: [1, 2, 3, 4, 5]
+
+lista_8 = [abs(x) for x in numeros_8]
+print("lista 8:", lista_8)
+
+
+# Ejercicio 9: Convertir a Conjunto
+# Usa comprensión de listas y la función set() para crear un conjunto de los caracteres únicos en una cadena de texto.
+texto = "abracadabra"
+# # Resultado esperado: {'a', 'b', 'c', 'd', 'r'}
+
+lista_9 = set([x for x in texto])
+print("lista 9:", lista_9)
+
+
+# Ejercicio 10: Ordenar Listas
+# Usa comprensión de listas y la función sorted() para ordenar cada lista en una lista de listas.
+listas_10 = [[3, 2, 1], [6, 5, 4], [9, 8, 7]]
+# # Resultado esperado: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+lista_10 = [sorted(x) for x in listas_10]
+print("lista 10:", lista_10)
+
+
+# Ejercicio 11: Enumerar Elementos
+# Usa comprensión de listas y la función enumerate() para crear una lista de tuplas que contengan el índice y el valor de cada elemento en una lista.
+numeros_11 = [10, 20, 30]
+# # Resultado esperado: [(0, 10), (1, 20), (2, 30)]
+
+lista_11 = [x for x in enumerate(numeros_11)]
+print("lista 11:", lista_11)
+
+
+# Ejercicio 12: Filtrar Números Pares
+# Usa comprensión de listas y la función filter() para crear una lista de los números pares en una lista de números.
+numeros_12 = [x for x in random.sample(range(0, 50), random.randrange(10, 30))]
+# # Resultado esperado: [2, 4, 6]
+
+# Alternate: lista_12 = list(filter(lambda x: x % 2 == 0, numeros_12))
+lista_12 = [x for x in filter(lambda x: x % 2 == 0, numeros_12)]
+print("lista 12:", lista_12)
+
+
+# Ejercicio 13: Mapear a Números Cuadrados
+# Usa comprensión de listas y la función map() para crear una lista de los cuadrados de los números en una lista.
+numeros_13 = [1, 2, 3, 4, 5]
+# # Resultado esperado: [1, 4, 9, 16, 25]
+
+# Alternate: lista_13 = list(map(lambda x: x ** 2, numeros_13))
+lista_13 = [x for x in map(lambda x: x ** 2, numeros_13)]
+print("lista 13:", lista_13)
+
+
+# Ejercicio 14: Emparejar Listas
+# Usa comprensión de listas y la función zip() para crear una lista de tuplas que emparejen elementos de dos listas.
+lista1 = [1, 2, 3]
+lista2 = ['a', 'b', 'c']
+# # Resultado esperado: [(1, 'a'), (2, 'b'), (3, 'c')]
+
+lista_14 = [x for x in zip(numeros_12, lista2)]
+print("lista 14:", lista_14)
