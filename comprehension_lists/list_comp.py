@@ -39,7 +39,6 @@ print(lista_de_3)
 # Define una lista de listas, donde cada sublista contiene varios números.
 # Utiliza una comprensión de listas para crear una nueva lista que contenga la suma de los números en cada sublista.
 
-total = 0
 
 listas_random = [[x for x in random.sample(range(10, 40), random.randrange(1, 12))] for i in range(3)]
 print(listas_random)
